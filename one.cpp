@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-void main(){
+int main(){
 
     int item{77};
 
@@ -12,17 +12,22 @@ void main(){
                                            {78, 79, 85},
                                            {72, 96, 77}};
 
-    int x = mat.size();
+    int x{}, y{};
 
     bool found;
-    for (int row = 0; row < x; ++row)
+    for (int row = 0; row < mat.size(); ++row)
         for (int col = 0; col < mat[row].size(); ++col)
-            if (mat[row][col] == item)
+            if (mat[row][col] == item){
+                y = row;
+                x = col;
                 found = true;
+            }
             else
                 found = false;
     if (found)
-        std::cout << "item found" << '\n';
+        std::cout << "item found at " << y << ", " << x << '\n';
     else
         std::cout << "item not found" << '\n';
+
+    return 0;
 }
