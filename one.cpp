@@ -8,9 +8,15 @@ int main(){
     std::cout << "Enter an item to search for: " << '\n';
     std::cin >> item;
 
+
     std::vector <std::vector <int>> mat = {{45, 77, 93},
                                            {78, 79, 85},
                                            {72, 96, 77}};
+
+//    int *mat[3][3]{ new int([3][3]){45, 77, 93},
+//                            {78, 79, 85},
+//                            {72, 96, 77}}
+//        };
 
     int x{}, y{};
 
