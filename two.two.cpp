@@ -16,7 +16,7 @@ void printBinary(int n){
         mask = mask>>1;
     }
 
-    for (int j = 0; j < num_of_bits; ++j)
+    for (int j = 0; j < sizeof(binary_representation)/sizeof(*binary_representation); ++j)
         std::cout << binary_representation[j];
 
     std::cout << std::endl;    
