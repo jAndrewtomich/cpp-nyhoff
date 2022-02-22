@@ -34,7 +34,7 @@ int main()
     m[0] = "Andrew";
     m[26] = "Tomich";
 
-    // Search map for specific key using std::map<...>::iterator
+    // Search map for specific key using std::map<...>::iterator and assert()
     std::map<int, std::string>::iterator it = m.find(26);
     assert(it != m.end());
     std::cout << "Key: " << it->first << ", Value: " << it->second << '\n';
